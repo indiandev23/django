@@ -2,4 +2,35 @@
 
 {% block title %}Contact{% endblock title %}
 
-{% block body %}This is Contact block{% endblock body %}
+{% block body %}
+<div class="container mx-0,px-0">
+    <img src="https://source.unsplash.com/random/900×700/?meeting" alt="">
+    </div>
+<div class="container my-4">
+    <h1>Contact Us</h1>
+    <form class="row g-3" method="post" action="/contact">
+        {% csrf_token %}
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" >
+        </div>
+        <div class="col-12">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="inputPassword">
+        </div>
+        <div class="col-12">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+        </div>
+
+        <div class="col-12">
+          <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+</div>
+
+{% endblock body %}
