@@ -1,6 +1,6 @@
-#from email.headerregistry import Address
+from email.headerregistry import Address
 from django.db import models
-#from django.forms import PasswordInput
+from django.forms import PasswordInput
 
 # Create your models here.
 class Contact(models.Model):
